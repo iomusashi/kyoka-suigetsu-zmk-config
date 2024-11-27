@@ -1,7 +1,0 @@
-# No whitespace after the comma or in your part name!
-config SHIELD_CHOCOFI_LEFT
-    def_bool $(shields_list_contains,chocofi_left)
-
-# No whitespace after the comma or in your part name!
-config SHIELD_CHOCOFI_RIGHT
-    def_bool $(shields_list_contains,chocofi_right)
