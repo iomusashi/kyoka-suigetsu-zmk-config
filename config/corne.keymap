@@ -20,7 +20,7 @@
 
 // Thumb cluster mods macro
 #define TRML(k1) &ht LCMD k1
-#defins TRMR(k1) &ht RCMD k1
+#define TRMR(k1) &ht RCMD k1
 
 #define QWT 0
 #define LEF 1
@@ -55,13 +55,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+    &none   &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ;        │
-            HRML(A)    &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     HRMR(SEMI)
+    &none   HRML(A)    &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L     HRMR(SEMI)  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ /        │
-            BRML(Z,     X)        &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  BRMR(DOT,  FSLH)
+    &none   BRML(Z,     X)        &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  BRMR(DOT,  FSLH)      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &kp TAB  &lt LEF ESC TRML(SPACE)    TRMR(RET) &lt RIG BSPC &kp GRAVE
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -72,13 +72,13 @@
                 bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
-            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
+    &none   &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  /       │  *       │  -       │  +       |   | LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-            &trans     &kp FSLH   &kp STAR   &kp MINUS  &kp PLUS       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
+    &none   &trans     &kp FSLH   &kp STAR   &kp MINUS  &kp PLUS       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │  &       │  |       │  .       │   │  =       │  _       │  -       │  '       │  \       │
-            &trans     &trans     &kp AMPS   &kp PIPE   &kp DOT        &kp EQUAL  &kp UNDER  &kp MINUS  &kp SQT    &kp BSLH 
+    &none   &trans     &trans     &kp AMPS   &kp PIPE   &kp DOT        &kp EQUAL  &kp UNDER  &kp MINUS  &kp SQT    &kp BSLH   &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &trans     &trans     &trans         &trans     &mo RIG     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -89,13 +89,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  (       │  )       │  &       │  *       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp LPAR   &kp RPAR   &kp AMPS   &kp STAR
+    &none   &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp LPAR   &kp RPAR   &kp AMPS   &kp STAR   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  <       │  -       │  >       │  &       │   │  _       │  {       │  }       │  ""      │          │
-            &trans     &kp LT     &kp MINUS  &kp GT     &kp AMPS       &kp UNDER  &kp LBRC   &kp RBRC   &kp DQT    &trans
+    &none   &trans     &kp LT     &kp MINUS  &kp GT     &kp AMPS       &kp UNDER  &kp LBRC   &kp RBRC   &kp DQT    &trans     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │  *       │  ~       │  |       │   │  =       │  [       │  ]       │  '       │  \       │
-            &trans     &trans     &kp STAR   &kp TILDE  &kp PIPE      &kp EQUAL   &kp LBKT   &kp RBKT   &kp SQT    &kp BSLH
+    &none   &trans     &trans     &kp STAR   &kp TILDE  &kp PIPE      &kp EQUAL   &kp LBKT   &kp RBKT   &kp SQT    &kp BSLH   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &trans     &mo LEF    &trans         &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -105,14 +105,14 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬───────────┬────────────╮   ╭────────────┬────────────┬──────────┬───────────┬──────────╮
-        //│  F1      │  F2      │  F3      │  F4       │ PROFILE 0  │   │ PROFILE 2  │ TOGGLEOUT  │          │ VOL MUTE  │ NEXTSONG │
-            &kp F1     &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2  &out OUT_TOG  &trans   &kp C_MUTE  &kp C_NEXT
+        //│  OFF     │  F2      │  F3      │  F4       │ PROFILE 0  │   │ PROFILE 2  │ TOGGLEOUT  │          │ VOL MUTE  │ NEXTSONG │
+    &none   &soft_off  &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2  &out OUT_TOG  &trans   &kp C_MUTE  &kp C_NEXT  &none
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│  F5      │  F6      │  F7      │  F8       │ PROFILE 1  │   │ PROFILE 3  │ INC BRIGHT │          │  VOL UP   │PAUSEMUSIC│
-            &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3  &kp C_BRI_UP  &trans   &kp C_VOL_UP  &kp C_PP
+    &none   &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3  &kp C_BRI_UP  &trans   &kp C_VOL_UP  &kp C_PP  &none
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │          |  VOL DOWN │ PREVSONG │
-            &kp F9     &kp F10    &kp F11    &kp F12     &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans   &kp C_VOL_DN &kp C_PREV
+    &none   &kp F9     &kp F10    &kp F11    &kp F12     &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans   &kp C_VOL_DN &kp C_PREV &none
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                   &trans     &trans      &trans           &trans       &trans       &trans
         //                      ╰──────────┴───────────┴────────────╯   ╰────────────┴────────────┴──────────╯
