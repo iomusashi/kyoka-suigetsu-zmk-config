@@ -20,7 +20,7 @@
 
 // Thumb cluster mods macro
 #define TRML(k1) &ht LCMD k1
-#defins TRMR(k1) &ht RCMD k1
+#define TRMR(k1) &ht RCMD k1
 
 #define QWT 0
 #define LEF 1
